@@ -28,7 +28,7 @@ while True:
     elif gaze.is_center():
         text = "Looking center"
 
-    cv2.putText(frame, text, (90, 60), cv2.FONT_HERSHEY_DUPLEX, 1.6, (147, 58, 31), 2)
+    cv2.putText(frame, text, (60, 60), cv2.FONT_HERSHEY_DUPLEX, 1.6, (147, 58, 31), 2)
 
     left_pupil = gaze.pupil_left_coords()
     right_pupil = gaze.pupil_right_coords()
@@ -39,6 +39,6 @@ while True:
 
     if cv2.waitKey(1) == 27:
         break
-   
+    
 webcam.release()
 cv2.destroyAllWindows()
